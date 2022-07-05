@@ -9,16 +9,16 @@ def all_ing():  # 每页的所有图片
     href = img_href.xpath('//li/a/@href')
     print(href)
     for href in href:
-        print(href)
+#         print(href)
         # 请求
         img_html = requests.get(url+href)
         img_html = etree.HTML(img_html.content.decode("utf8"))
         # xpath获取数据
         img_name = img_html.xpath('//h1/text()')[0]
         img = img_html.xpath('//div[@class="article"]//a/img/@src')[0]
-        print(img_name)
-        print(url + href)
-        print(img)
+#         print(img_name)
+#         print(url + href)
+#         print(img)
         img_url = requests.get(img)
         suffix = img[-4:]
         try:
@@ -41,7 +41,7 @@ def select():   # 选择哪页
         # 正则替换
         strinfo = re.compile('2')
         img_href = strinfo.sub(f'{jy}', href)
-        print(href)
+#         print(href)
         img_href = url + img_href
         img_html = requests.get(img_href)
         img_href = etree.HTML(img_html.content.decode("utf8"))
@@ -55,9 +55,9 @@ def select():   # 选择哪页
             # xpath获取数据
             img_name = img_html.xpath('//h1/text()')[0]
             img = img_html.xpath('//li//a/img/@src')[0]
-            print(img_name)
-            print(url + href)
-            print(img)
+#             print(img_name)
+#             print(url + href)
+#             print(img)
             img_url = requests.get(img)
             suffix = img[-4:]
             try:
@@ -81,7 +81,7 @@ def select():   # 选择哪页
             img_html = requests.get(img_href)
             img_href = etree.HTML(img_html.content.decode("utf8"))
             img_href = img_href.xpath('//li/a/@href')
-            print(img_href)
+#             print(img_href)
             for img_href in img_href:
                 print(url+img_href)
                 # 请求
@@ -90,9 +90,9 @@ def select():   # 选择哪页
                 # xpath获取数据
                 img_name = img_html.xpath('//h1/text()')[0]
                 img = img_html.xpath('//div[@class="article"]//a/img/@src')[0]
-                print(img_name)
-                print(url + href)
-                print(img)
+#                 print(img_name)
+#                 print(url + href)
+#                 print(img)
                 img_url = requests.get(img)
                 suffix = img[-4:]
                 try:
@@ -134,64 +134,64 @@ sr = input("bizhi360壁纸下载输入要下载的数字：")
 # 判断选项
 if sr == '1':
     lj_url = lj[0]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '2':
     lj_url = lj[1]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '3':
     lj_url = lj[2]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '4':
     lj_url = lj[3]
-    print(lj_url)
+#     print(lj_url)
 elif sr == '5':
     lj_url = lj[4]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '6':
     lj_url = lj[5]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '7':
     lj_url = lj[6]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '8':
     lj_url = lj[7]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '9':
     lj_url = lj[8]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '10':
     lj_url = lj[9]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '11':
     lj_url = lj[10]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '12':
     lj_url = lj[11]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '13':
     lj_url = lj[12]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '14':
     lj_url = lj[13]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '15':
     lj_url = lj[14]
-    print(lj_url)
+#     print(lj_url)
     select()
 elif sr == '16':
     lj_url = lj[15]
-    print(lj_url)
+#     print(lj_url)
     select()
